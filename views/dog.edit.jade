@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Doggy Directory
+  body
+
+    h3 Edit Current Dog
+      ul= dog[0].name
+        li= dog[0].color
+        br
+    form(name="editDog", action="/dogs/" + dog[0]._id, method="post")
+      input(type="text", name="name", value= dog[0].name)
+      br
+      input(type="text", name="color", value= dog[0].color)
+      br
+      input(type="submit", value="edit dog")
+
+    button(onclick = "move('/dogs')") Go Home
+    button(onclick = "move('/dogs/"+ dog[0]._id + "/delete')") Delete This Pup
+  script.
+    function move(path) {
+      window.location.href = path
+    }

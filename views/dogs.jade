@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Doggy Directory
+  body
+
+    h3 Current Dogs
+    ul
+      for dog in dogs
+        ul= dog.name
+          li= dog.color
+          button(onclick = "move('/dogs/" + dog._id + "')") View this Pup
+          br
+
+    button(onclick = "move('/dogs/new')") Create a Pup
+  script.
+    function move(path) {
+      window.location.href = path
+    }

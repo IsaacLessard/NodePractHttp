@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Doggy Directory
+  body
+
+    h3 Current Dog
+      ul= dog[0].name
+        li= dog[0].color
+        button(onclick = "move('/dogs/" + dog[0]._id + "/edit')") Edit this Pup
+        br
+
+    button(onclick = "move('/dogs')") Go home
+  script.
+    function move(path) {
+      window.location.href = path
+    }

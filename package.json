@@ -1,0 +1,14 @@
+{
+  "name": "w02d02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "ICLL",
+  "license": "MIT",
+  "dependencies": {
+    "pug": "^0.1.0"
+  }
+}

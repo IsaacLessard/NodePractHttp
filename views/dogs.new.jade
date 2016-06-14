@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Create a Pup
+  body
+  h1 Create a dog!
+
+  form(name="createDog", action="/dogs", method="post")
+    input(type="text", name="name", placeholder="name")
+    br
+    input(type="text", name="color", placeholder="color")
+    br
+    input(type="submit", value="create dog")
